@@ -7,12 +7,6 @@ const Footer = () => (
                 inline-flex justify-between md:justify-center items-center
                 bg-light-gray rounded-t-lg"
         >
-            <PoweredByFlotiq />
-            <p className="text-center text-xs md:text-base font-light">
-                Copyright &copy; Flotiq
-                {' '}
-                {new Date().getFullYear()}
-            </p>
         </div>
     </footer>
 );

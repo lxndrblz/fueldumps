@@ -22,51 +22,19 @@ const instagramSvgContent = 'M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791
     + '0-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.'
     + '4 1.2 1.2 0 010-2.4z';
 
+
 const socialIcons = {
     social: [
         {
-            name: 'Facebook',
-            href: 'https://www.facebook.com/flotiq',
-            icon: (props) => (
-                <svg fill="currentColor" viewBox="0 0 13 25" {...props}>
-                    <path
-                        fillRule="evenodd"
-                        d="M8.30466 24.1211V13.5346H11.8761L12.407 9.38964H8.30466V6.74947C8.30466
-                    5.55339 8.63791 4.73447 10.3545 4.73447H12.5297V1.03902C11.4714 0.925596
-                    10.4076 0.870832 9.34316 0.874974C6.18633 0.874974 4.01891 2.80214 4.01891
-                    6.34002V9.38189H0.470703V13.5268H4.02666V24.1211H8.30466Z"
-                        clipRule="evenodd"
-                    />
-                </svg>
-            ),
-        },
-        {
-            name: 'Instagram',
-            href: '#',
+            name: 'E-Mail',
+            href: 'mailto:mail@fueldumps.com',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                     <path
                         fillRule="evenodd"
-                        d={instagramSvgContent}
+                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                         clipRule="evenodd"
                     />
-                </svg>
-            ),
-        },
-        {
-            name: 'Youtube',
-            href: 'https://www.youtube.com/channel/UC4wpV-D9mIt1JjN_g_iyXXw',
-            icon: (props) => (
-                <svg fill="currentColor" viewBox="0 0 48 48" {...props}>
-                    <path
-                        fillRule="evenodd"
-                        d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,
-                    1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,
-                    31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,
-                    17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,
-                    5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
-                    />
-                    <path fill="#F4F4F4" d="M20 31L20 17 32 24z" />
                 </svg>
             ),
         },
@@ -80,9 +48,6 @@ const Contact = ({
     emailInputLabel,
     messageInputLabel,
     buttonLabel,
-    phoneNumber,
-    address,
-    emailAddress,
 }) => {
     const data = useStaticQuery(query);
     return (
@@ -115,22 +80,6 @@ const Contact = ({
                         ))}
                     </div>
                     <div className="flex flex-col space-y-1 md:pl-24">
-                        <p className="h-10 p-1 text-xl font-light">
-                            Phone:
-                            <a href="/" className="font-normal ml-5">
-                                {phoneNumber}
-                            </a>
-                        </p>
-                        <p className="h-10 p-1 text-xl font-light">
-                            Address:
-                            <span className="font-normal ml-5">{address}</span>
-                        </p>
-                        <p className="h-10 p-1 text-xl font-light">
-                            Email:
-                            <a href="/" className="font-normal ml-5">
-                                {emailAddress}
-                            </a>
-                        </p>
                     </div>
                 </div>
                 <div className="w-full md:hidden flex items-center justify-between mt-10">

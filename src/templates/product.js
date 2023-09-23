@@ -24,21 +24,9 @@ const ProductTemplate = ({ data }) => {
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <ProductBackButton additionalClass={['mt-12 mb-5']} backButtonText="Back to all products" />
                 <div className="flex flex-wrap mb-10">
-                    <div
-                        className="flex basis-full lg:basis-1/2"
-                    >
-                        <GatsbyImage
-                            image={getImage(product.productImage[0] && product.productImage[0].localFile)}
-                            className="w-full"
-                            alt={product.name}
-                        />
-                    </div>
-                    <div className="flex flex-col basis-full lg:basis-1/2 pl-0 lg:pl-12 pt-5 pb-10 bg-white">
+                    <div className="flex flex-col basis-full pl-0 lg:pl-12 pt-5 pb-10 bg-white">
                         <Header additionalClasses={['text-xl md:text-5xl !font-normal !pb-0']}>
                             {product.name}
-                        </Header>
-                        <Header additionalClasses={['!font-light !p-0']} level={2}>
-                            Category
                         </Header>
                         <Paragraph additionalClasses={['mt-10 text-lg']}>
                             {product.description}

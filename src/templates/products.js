@@ -12,10 +12,7 @@ import CategoriesChoiceBar from '../components/CategoriesChoiceBar';
 const ProductsPage = ({ data, pageContext }) => {
     const products = data.allProduct.nodes;
     const categoryTabs = [
-        { name: 'Category 1', href: '#', current: true },
-        { name: 'Category 2', href: '#', current: false },
-        { name: 'Cactus', href: '#', current: false },
-        { name: 'Big Plants', href: '#', current: false },
+        { name: 'E-Book', href: '#', current: true }
     ];
     return (
         <Layout additionalClass={['bg-white']}>
@@ -32,7 +29,7 @@ const ProductsPage = ({ data, pageContext }) => {
                     <Header
                         additionalClasses={['!text-xl md:!text-3xl !font-normal font-roboto !p-0']}
                     >
-                        Category 1
+                        E-Book
                     </Header>
                 </div>
                 <ProductCards products={products} additionalClass="my-5" />
@@ -47,14 +44,6 @@ const ProductsPage = ({ data, pageContext }) => {
                 />
             </div>
             <BestSellers products={products} additionalClass={['bg-green-gray py-14']} headerText="Best sellers" />
-            <ImageWithText
-                image={ImageWithTextBackground}
-                headerText1="Buy one"
-                headerText2="plant get"
-                headerText3="one for free"
-                buttonLabel="All the products"
-                additionalClass={['my-10']}
-            />
         </Layout>
     );
 };

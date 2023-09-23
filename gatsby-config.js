@@ -11,31 +11,11 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: 'Flotiq Gatsby shop starter',
-        description: 'Flotiq Gatsby shop starter',
-        siteUrl: 'https://flotiqgatsbyshop2.gtsb.io',
+        title: 'FuelDumps.com | Fly for less.',
+        description: 'Fly for less.',
+        siteUrl: 'https://fueldumps.com',
     },
     plugins: [
-        {
-            // How to configure? https://www.gatsbyjs.com/plugins/gatsby-plugin-google-gtag/
-            // Video: https://www.youtube.com/watch?v=Dwi99jtl3Fs
-            resolve: 'gatsby-plugin-google-gtag',
-            options: {
-                trackingIds: [
-                    process.env.GA_MEASUREMENT_ID || 'test', // GA Measurement
-                ],
-                gtagConfig: {
-                    optimize_id: 'OPT_CONTAINER_ID',
-                    anonymize_ip: true,
-                    cookie_expires: 0,
-                },
-                pluginConfig: {
-                    head: true,
-                    respectDNT: true,
-                    exclude: ['/preview/**', '/do-not-track/me/too/'],
-                },
-            },
-        },
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
         {
